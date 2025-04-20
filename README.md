@@ -2,13 +2,13 @@
 
 Algorithms (CSCI 3343) - Julian Spindola
 
-# Overview
+## Overview
 
 Below, I will be using a Large Language Model (LLM) to generate solutions to two common algorithmic problems – 0/1 Knapsack and the Fractional Knapsack problems. I will be using the provided test cases and conduct an analysis of the LLM’s performance and code.
 
 The LLM that I have chosen for this assignment is Gemini 2.5 Pro.
 
-# Prompts
+## Prompts
 
 For the 0/1 Knapsack problem, I used the following prompt:
 
@@ -18,7 +18,7 @@ For the Fractional Knapsack problem, I used the following prompt:
 
 “Generate a solution to the Fractional Knapsack Problem using a Greedy Algorithm in Java”
 
-# Results
+## Results
 
 For the 0/1 Knapsack problem, Gemini produced the following code:
 
@@ -236,7 +236,7 @@ public class FractionalKnapsack {
 
 <table><tbody><tr><th colspan="2"><p>Similarities and Differences from Pseudocode</p></th></tr><tr><td><p>Similarities</p></td><td><p>Differences</p></td></tr><tr><td><ul><li>Both programs follow the same general procedure, going through each item, adding it into the knapsack until it reaches capacity.</li></ul></td><td><ul><li>The generated code provides a class for the Item and the required ItemComparator class for sorting</li><li>The generated code uses a for-loop to iterate through the items</li><li>The psuedocode’s <em>do if </em>is replaced by an early break statement in the generated code</li></ul></td></tr></tbody></table>
 
-# Tests
+## Tests
 
 Below is a tabular representation of my results completing the three tests outlined in the assignment’s requirements.
 
@@ -251,6 +251,6 @@ _\*Random Data Weights: \[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,
 
 _\*Random Data Values: \[2, 8, 12, 16, 25, 26, 34, 37, 45, 47, 51, 57, 61, 69, 73, 77, 83, 90, 95, 97, 101, 109, 115, 117, 121, 127, 133, 136, 141, 147, 153, 159, 164, 168, 173, 178, 182, 190, 192, 197, 203, 208, 212, 220, 225, 227, 235, 236, 243, 247, 252, 260, 262, 268, 273, 277, 283, 288, 295, 298, 302, 308, 314, 320, 321, 327, 331, 338, 342, 348, 351, 357, 365, 368, 375, 377, 382, 389, 394, 396, 404, 406, 413, 417, 423, 426, 433, 438, 445, 448, 455, 457, 462, 469, 472, 476, 482, 489, 491, 498\]_
 
-# Conclusion
+## Conclusion
 
 It seems that Gemini 2.5 Pro was successfully able to produce correct and working implementations of the two variations of the Knapsack problem. The generated code contained helpful comments explaining the logic behind each algorithm. I would go as far as to say that the generated code is easier to understand than the provided pseudocode and enhanced my comprehension of this algorithm. It should be noted, however, that the generated code can be inconsistent in its implementation. For example, the LLM created an Item class for the Greedy solution but not the Dynamic Programming approach. For this reason, it is best to use LLMs with caution while coding, especially in existing code environments.
