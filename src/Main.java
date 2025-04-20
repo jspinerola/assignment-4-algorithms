@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Main {
@@ -20,6 +21,10 @@ public class Main {
             randomItemWeights[i] = i + 1; // set weights of items to 1-100
             randomItemValues[i] = (int) (Math.random() * 5 + 1) + (i * 5); //set item values to proportionally random values
         }
+        System.out.println("Randomly Generated Data:");
+        System.out.println("weights: " + Arrays.toString(randomItemWeights));
+        System.out.println("values: " + Arrays.toString(randomItemValues));
+
 
         Algorithms algos = new Algorithms();
         Object[] DP1 =  algos.pickAlgorithm(0, sampleData1Values, sampleData1Weights, sampleData1Max);
@@ -31,9 +36,9 @@ public class Main {
         System.out.printf("%-10s%-10s%-88s%-10s\n", "", "0/1 Knapsack", "", "Fractional Knapsack");
         System.out.println("----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
         System.out.printf("%-10s|%-10s|%-55s|%-10s|%-10s     *|*     %-10s|%-55s|%-10s|%-10s\n", "", "Result", "Included Items", "Time Comp.", "Exec. Time", "Result", "Included Items", "Time Comp.", "Exec. Time");
-        System.out.printf("%-10s|%-10s|%-55s|%-10s|%-10s     *|*     %-10s|%-55s|%-10s|%-10s\n", "DataSet 1", DP1[0], DP1[3], "", DP1[1], GREEDY1[0], GREEDY1[2], "", GREEDY1[1]);
-        System.out.printf("%-10s|%-10s|%-55s|%-10s|%-10s     *|*     %-10s|%-55s|%-10s|%-10s\n", "DataSet 2", DP2[0], DP2[3], "", DP2[1], GREEDY2[0], GREEDY2[2], "", GREEDY2[1]);
-        System.out.printf("%-10s|%-10s|%-55s|%-10s|%-10s     *|*     %-10s|%-55s|%-10s|%-10s\n", "Rndm Vals", DP3[0], DP3[3], "", DP3[1], GREEDY3[0], GREEDY3[2], "", GREEDY3[1]);
+        System.out.printf("%-10s|%-10s|%-55s|%-10s|%-10s     *|*     %-10s|%-55s|%-10s|%-10s\n", "DataSet 1", DP1[0], DP1[3], "O(n * W)", DP1[1], GREEDY1[0], GREEDY1[2], "O(nlogn)", GREEDY1[1]);
+        System.out.printf("%-10s|%-10s|%-55s|%-10s|%-10s     *|*     %-10s|%-55s|%-10s|%-10s\n", "DataSet 2", DP2[0], DP2[3], "O(n * W)", DP2[1], GREEDY2[0], GREEDY2[2], "O(nlogn)", GREEDY2[1]);
+        System.out.printf("%-10s|%-10s|%-55s|%-10s|%-10s     *|*     %-10s|%-55s|%-10s|%-10s\n", "Rndm Vals", DP3[0], DP3[3], "O(n * W)", DP3[1], GREEDY3[0], GREEDY3[2], "O(nlogn)", GREEDY3[1]);
 
     }
 }
